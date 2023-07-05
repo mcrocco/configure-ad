@@ -27,7 +27,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Use Powershell to Create Non-Administrative Users 
 
 <h2>Deployment and Configuration Steps</h2>
-
+<h3>Setup Virtual Machines in Azure</h3>
 <p>
 <img src="https://i.imgur.com/BmsB2eH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -36,6 +36,7 @@ To set up our Active Directory environment, we need to create two virtual machin
 </p>
 <br />
 
+<h3>Install Active Directory & Create an Admin Account</h3>
 <p>
 <img src="https://i.imgur.com/WfdYY3Y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -53,6 +54,7 @@ To create an administrative account in Active Directory, go to Tools in Server M
 </p>
 <br />
 
+<h3>Join "Client-1" to the Active Directory Domain</h3>
 <p>
 <img src="https://i.imgur.com/aU3m3OB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -62,6 +64,7 @@ To join Client-1 to the Active Directory Domain (mydomain.com), change Client-1'
 <img src="https://i.imgur.com/BtkgPah.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
+<h3>Use Powershell to Create Non-Administrative Users</h3>
 <p>
 <img src="https://i.imgur.com/5QIqSfa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -74,6 +77,6 @@ Before creating non-administrative users in Active Directory, we need to allow n
 <img src="https://i.imgur.com/bkJZNpR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To create non-administrative users in Active Directory, go back to the DC-1 virtual machine as jane_admin. Open Powershell ISE as an administrator, create a new file and paste this script into it https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1. Select run (green arrow), and 10,000 users will be randomly generated, and put into the _EMPLOYEES Organizational Unit (note all have the password as Password1). You can now log into Client-1 with any of the new non-administrative users!
+To create non-administrative users in Active Directory, go back to the DC-1 virtual machine as jane_admin. Open Powershell ISE as an administrator, create a new file and paste this script into it https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1. Select run (green arrow), and 10,000 users will be randomly generated, and put into the _EMPLOYEES Organizational Unit (note all have the password as Password1). You can now log into Client-1 with any of the new non-administrative users. Congratulations, you have successfully deployed Active Directory in a virtual environment!
 </p>
 <br />
