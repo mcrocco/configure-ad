@@ -32,7 +32,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/BmsB2eH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To set up our Active Directory environment, we need to create two virtual machines within Microsoft Azure. Create one virtual machine with Windows Server 2022 and name it as DC-1, since this virtual machine will be our domain controller for Active Directory. Create another virtual machine with Windows 10 as the image and name is as Client-1, since this virtual machine will simulate a computer that will be on Active Directory's domain in a organization. Before logging in to each virtual machine via Remote Desktop, change the DC-1's NIC private IP address to static so that the client's connection to the domain doesn't accidently get lost. Additionally, make sure both virtual machines are in the same Resource Group and virtual network. Log in to DC-1 and go to the local windows firewall to enable ICMPv4 echo requests and replies so that Client-1 can communicate/connect to DC-1. 
+To set up our Active Directory environment, we need to create two virtual machines within Microsoft Azure. Create one virtual machine with Windows Server 2022 and name it DC-1, since this virtual machine will be our domain controller for Active Directory. Create another virtual machine with Windows 10 as the image and name it Client-1, since this virtual machine will simulate a computer that will be on Active Directory's domain in an organization. Before logging in to each virtual machine via Remote Desktop, change the DC-1's NIC private IP address to static so that the client's connection to the domain doesn't accidentally get lost. Additionally, make sure both virtual machines are in the same Resource Group and virtual network. Log in to DC-1 and go to the local windows firewall to enable ICMPv4 echo requests and replies so that Client-1 can communicate/connect to DC-1. 
 </p>
 <br />
 
@@ -41,7 +41,7 @@ To set up our Active Directory environment, we need to create two virtual machin
 <img src="https://i.imgur.com/WfdYY3Y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To install Active Directory on DC-1, go to add roles on Server Manager and check off Active Directory Domain Services when prompted, and install (pictured above). Then, we have to actually make the DC-1 virtual machine a domain controller. To do this, click the yellow icon on server manager to display a screen that is shown below. From here, select new forest and name it whatever you desire (in this example it will be mydomain.com). Once complete, restart the virtual machine and log back in. 
+To install Active Directory on DC-1, go to add roles on Server Manager and check off Active Directory Domain Services when prompted, and install (pictured above). Then, we have to actually make the DC-1 virtual machine a domain controller. To do this, click the yellow icon on server manager to display a screen that is shown below. From here, select a new forest and name it whatever you desire (in this example it will be mydomain.com). Once complete, restart the virtual machine and log back in. 
 </p>
 <img src="https://i.imgur.com/yRv0Sal.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -69,7 +69,7 @@ To join Client-1 to the Active Directory Domain (mydomain.com), change Client-1'
 <img src="https://i.imgur.com/5QIqSfa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Before creating non-administrative users in Active Directory, we need to allow non-administrative users to log in to Client-1. To do this, log in to the virtual machine as jane_admin since it is the administrative account, and open system properties. Select Remote Desktop and then 'Select users that can remotely access this PC". Add Domain Users to this and select "OK", since domain users are a domain for every user that is created under Active Directory. 
+Before creating non-administrative users in Active Directory, we need to allow non-administrative users to log in to Client-1. To do this, log in to the virtual machine as jane_admin since it is the administrative account and open system properties. Select Remote Desktop and then 'Select users that can remotely access this PC". Add Domain Users to this and select "OK", since domain users are a domain for every user that is created under Active Directory. 
 </p>
 <br />
 
@@ -77,6 +77,6 @@ Before creating non-administrative users in Active Directory, we need to allow n
 <img src="https://i.imgur.com/bkJZNpR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To create non-administrative users in Active Directory, go back to the DC-1 virtual machine as jane_admin. Open Powershell ISE as an administrator, create a new file and paste this script into it https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1. Select run (green arrow), and 10,000 users will be randomly generated, and put into the _EMPLOYEES Organizational Unit (note all have the password as Password1). You can now log into Client-1 with any of the new non-administrative users. Congratulations, you have successfully deployed Active Directory in a virtual environment!
+To create non-administrative users in Active Directory, go back to the DC-1 virtual machine as jane_admin. Open Powershell ISE as an administrator, create a new file, and paste this script into it https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1. Select run (green arrow), and 10,000 users will be randomly generated, and put into the _EMPLOYEES Organizational Unit (note all have the password as Password1). You can now log into Client-1 with any of the new non-administrative users. Congratulations, you have successfully deployed Active Directory in a virtual environment!
 </p>
 <br />
