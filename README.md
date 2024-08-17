@@ -86,8 +86,7 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 </p>
 
 
-<h3>How Can We Increase the Security of a Windows Server & the Resources Hosted by the Server?
-</h3>
+<h3>How Can We Increase the Security of a Windows Server & the Resources Hosted by the Server?</h3>
 - Enable auditing for those accessing resources such as PHI hosted by the server, allowing administrators to see information on login attempts, resources accessed, etc. 
 - Configure logs through Event Viewer to send out alerts if certain actions happen, such as if there is someone attempting to login from another country. You can also configure a SIEM so that all logs are aggregated to one place and further customized when you are alerted based on specified criteria. 
 - Implement a patch management tool either from a third party or via Windows Server Update Services to schedule & plan to make security updates when they are released. 
@@ -100,8 +99,7 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 - Create an incident response & disaster recovery program. These will be extremely useful in the case that a malicious act is carried out on the server or the network that is connected to the server as well as if something physically happens to where the server is housed such as a natural disaster. These programs make everyone aware of the steps that will be carried out to ensure clear communication & responsiveness. 
 
 
-<h3>What Can be Used for Conducting a Security Risk Assessment on a Windows Server for HIPPA Compliance? 
-</h3>
+<h3>What Can be Used for Conducting a Security Risk Assessment on a Windows Server for HIPPA Compliance? </h3>
 - The Security Risk Assessment (SRA) tool from healthit.gov can be used to gather a risk assessment of your enterprise environment in relation to being in compliance with HIPPA regulations.
 - The questions that the SRA tool asks are based on HIPPA regulations and the NIST Cybersecurity Framework (CSF).
 - References are provided for each question asked in relation to HIPPA or the NIST CSF. 
