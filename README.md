@@ -87,6 +87,8 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 
 <p>
 <h3>How Can We Increase the Security of a Windows Server & the Resources Hosted by the Server?</h3>
+</p>
+<p>
   - Enable auditing for those accessing resources such as PHI hosted by the server, allowing administrators to see information on login attempts, resources accessed, etc. 
   - Configure logs through Event Viewer to send out alerts if certain actions happen, such as if there is someone attempting to login from another country. You can also configure a SIEM so that all logs are aggregated to one place and further customized when you are alerted based on specified criteria. 
   - Implement a patch management tool either from a third party or via Windows Server Update Services to schedule & plan to make security updates when they are released. 
