@@ -89,24 +89,42 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 <h3>How Can We Increase the Security of a Windows Server & the Resources Hosted by the Server?</h3>
 </p>
 <p>
-  - Enable auditing for those accessing resources such as PHI hosted by the server, allowing administrators to see information on login attempts, resources accessed, etc. 
-  - Configure logs through Event Viewer to send out alerts if certain actions happen, such as if there is someone attempting to login from another country. You can also configure a SIEM so that all logs are aggregated to one place and further customized when you are alerted based on specified criteria. 
-  - Implement a patch management tool either from a third party or via Windows Server Update Services to schedule & plan to make security updates when they are released. 
-  - Configure role-based access control for users/groups on Active Directory to create a “least-privilege” environment. 
-  - Create password policies to ensure strong passwords, password rotations, locking-out procedures, and at least two-factor authentication (2FA) for maximum security of user accounts. 
-  - Encrypt all data hosted on the server, whether this is data at rest or in transit. Bitlocker is a tool that can implement encryption on the physical storage connected to the Windows Server. Installing backups of critical information such as PHI is beneficial in case of a ransomware attack or any malfunctions that may occur on the original hardware.
-  - Configure data loss prevention (DLP) & file integrity monitoring (FIM) to prevent PHI or any other personal information from leaving the secure enterprise network and to be notified if anyone is attempting to modify the integrity of critical files.
-  - Ensure that anti-virus/anti-malware protection is enabled on Windows Server. Windows Defender will conduct scans on the server and files to check if they match any signatures from known malware, then notify the administrator for further remediation. 
-  - Confirm with the manufacturer that the server is still receiving security support. If the server is at the end of service life (EOSL), plans need to be created to retire the server and purchase a new one that will be receiving continuous support. 
-  - Create an incident response & disaster recovery program. These will be extremely useful in the case that a malicious act is carried out on the server or the network that is connected to the server as well as if something physically happens to where the server is housed such as a natural disaster. These programs make everyone aware of the steps that will be carried out to ensure clear communication & responsiveness. 
+
+- Enable auditing for those accessing resources such as PHI hosted by the server, allowing administrators to see information on login attempts, resources accessed, etc.
+
+- Configure logs through Event Viewer to send out alerts if certain actions happen, such as if there is someone attempting to login from another country. You can also configure a SIEM so that all logs are aggregated to one place and further customized when you are alerted based on specified criteria.
+  
+- Implement a patch management tool either from a third party or via Windows Server Update Services to schedule & plan to make security updates when they are released.
+  
+- Configure role-based access control for users/groups on Active Directory to create a “least-privilege” environment.
+
+- Create password policies to ensure strong passwords, password rotations, locking-out procedures, and at least two-factor authentication (2FA) for maximum security of user accounts. 
+- Encrypt all data hosted on the server, whether this is data at rest or in transit. Bitlocker is a tool that can implement encryption on the physical storage connected to the Windows Server. Installing backups of critical information such as PHI is beneficial in case of a ransomware attack or any malfunctions that may occur on the original hardware.
+
+- Configure data loss prevention (DLP) & file integrity monitoring (FIM) to prevent PHI or any other personal information from leaving the secure enterprise network and to be notified if anyone is attempting to modify the integrity of critical files.
+
+- Ensure that anti-virus/anti-malware protection is enabled on Windows Server. Windows Defender will conduct scans on the server and files to check if they match any signatures from known malware, then notify the administrator for further remediation.
+
+- Confirm with the manufacturer that the server is still receiving security support. If the server is at the end of service life (EOSL), plans need to be created to retire the server and purchase a new one that will be receiving continuous support.
+
+- Create an incident response & disaster recovery program. These will be extremely useful in the case that a malicious act is carried out on the server or the network that is connected to the server as well as if something physically happens to where the server is housed such as a natural disaster. These programs make everyone aware of the steps that will be carried out to ensure clear communication & responsiveness. 
 </p>
 
 <h3>What Can be Used for Conducting a Security Risk Assessment on a Windows Server for HIPPA Compliance? </h3>
-  - The Security Risk Assessment (SRA) tool from healthit.gov can be used to gather a risk assessment of your enterprise environment in relation to being in compliance with HIPAA regulations.
-  - The questions that the SRA tool asks are based on HIPPA regulations and the NIST Cybersecurity Framework (CSF).
-  - References are provided for each question asked in relation to HIPPA or the NIST CSF. 
-  - You can also attach reports/documentation to the SRA tool file, such as vulnerability scans, penetration test results, & assets related to electronic protected health information (PHI). 
-  - This tool will also allow you to input remediation steps for vulnerabilities that the tool deems your environment at risk for based on your answers. This makes it easier for documentation purposes by keeping it all within the risk assessment. 
-  - At the end of the assessment, a risk score will be assessed as well as areas for review to guide you to reach HIPPA compliance in your environment. You may save the entire security risk assessment as a file to easily share it with others. 
-  - You can read more about it and download it here: https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool
+<p>
+  
+- The Security Risk Assessment (SRA) tool from healthit.gov can be used to gather a risk assessment of your enterprise environment in relation to complying with HIPAA regulations.
+
+- The questions that the SRA tool asks are based on HIPPA regulations and the NIST Cybersecurity Framework (CSF).
+  
+- References are provided for each question asked in relation to HIPPA or the NIST CSF.
+  
+- You can also attach reports/documentation to the SRA tool file, such as vulnerability scans, penetration test results, & assets related to electronic protected health information (PHI).
+  
+- This tool will also allow you to input remediation steps for vulnerabilities that the tool deems your environment at risk for based on your answers. This makes it easier for documentation purposes by keeping it all within the risk assessment.
+  
+- At the end of the assessment, a risk score will be assessed as well as areas for review to guide you to reach HIPPA compliance in your environment. You may save the entire security risk assessment as a file to easily share it with others.
+  
+- You can read more about it and download it here: https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool
+</p>
 <br />
