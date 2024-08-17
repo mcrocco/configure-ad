@@ -85,11 +85,9 @@ Before creating non-administrative users in Active Directory, we need to allow n
 To create non-administrative users in Active Directory, go back to the DC-1 virtual machine as jane_admin. Open Powershell ISE as an administrator, create a new file, and paste this script into it https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1. Select run (green arrow), and 10,000 users will be randomly generated, and put into the _EMPLOYEES Organizational Unit (note all have the password as Password1). You can now log into Client-1 with any of the new non-administrative users. Congratulations, you have successfully deployed Active Directory in a virtual environment!
 </p>
 
-<p>
+
 <h3>How Can We Increase the Security of a Windows Server & the Resources Hosted by the Server?
 </h3>
-</p>
-<p>
 - Enable auditing for those accessing resources such as PHI hosted by the server, allowing administrators to see information on login attempts, resources accessed, etc. 
 - Configure logs through Event Viewer to send out alerts if certain actions happen, such as if there is someone attempting to login from another country. You can also configure a SIEM so that all logs are aggregated to one place and further customized when you are alerted based on specified criteria. 
 - Implement a patch management tool either from a third party or via Windows Server Update Services to schedule & plan to make security updates when they are released. 
@@ -100,11 +98,10 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 - Ensure that anti-virus/anti-malware protection is enabled on Windows Server. Windows Defender will conduct scans on the server and files to check if they match any signatures from known malware, then notify the administrator for further remediation. 
 - Confirm with the manufacturer that the server is still receiving security support. If the server is at the end of service life (EOSL), plans need to be created to retire the server and purchase a new one that will be receiving continuous support. 
 - Create an incident response & disaster recovery program. These will be extremely useful in the case that a malicious act is carried out on the server or the network that is connected to the server as well as if something physically happens to where the server is housed such as a natural disaster. These programs make everyone aware of the steps that will be carried out to ensure clear communication & responsiveness. 
-</p>
+
 
 <h3>What Can be Used for Conducting a Security Risk Assessment on a Windows Server for HIPPA Compliance? 
 </h3>
-<p>
 - The Security Risk Assessment (SRA) tool from healthit.gov can be used to gather a risk assessment of your enterprise environment in relation to being in compliance with HIPPA regulations.
 - The questions that the SRA tool asks are based on HIPPA regulations and the NIST Cybersecurity Framework (CSF).
 - References are provided for each question asked in relation to HIPPA or the NIST CSF. 
@@ -112,5 +109,4 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 - This tool will also allow you to input remediation steps for vulnerabilities that the tool deems your environment at risk for based on your answers. This makes it easier for documentation purposes by keeping it all within the risk assessment. 
 - At the end of the assessment, a risk score will be assessed as well as areas for review to guide you to reach HIPPA compliance in your environment. You may save the entire security risk assessment as a file to easily share it with others. 
 - You can read more about it and download it here: https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool
-</p>
 <br />
