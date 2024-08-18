@@ -107,7 +107,7 @@ To create non-administrative users in Active Directory, go back to the DC-1 virt
 
 - Confirm with the manufacturer that the server is still receiving security support. If the server is at the end of service life (EOSL), plans need to be created to retire the server and purchase a new one that will be receiving continuous support.
 
-- Create an incident response & disaster recovery program. These will be extremely useful in the case that a malicious act is carried out on the server or the network that is connected to the server as well as if something physically happens to where the server is housed such as a natural disaster. These programs make everyone aware of the steps that will be carried out to ensure clear communication & responsiveness. 
+- Create an incident response & disaster recovery program. These will be extremely useful when a malicious act is carried out on the server/network as well as if something physically happens to where the server is housed such as a natural disaster. These programs make everyone aware of the steps that will be carried out to ensure clear communication & responsiveness. 
 </p>
 
 <h3>What Can be Used for Conducting a Security Risk Assessment on a Windows Server for HIPPA Compliance? </h3>
